@@ -24,3 +24,6 @@ log_format json escape=json '{"time":"$time_local",'
 
 access_log /var/log/nginx/access.log json;
 error_log /var/log/nginx/error.log;
+
+このように加工できる
+sudo cat access.log | alp json -m "/api/livestream/[0-9]+,/api/user/[a-z0-9]+"
