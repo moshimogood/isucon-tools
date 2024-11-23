@@ -1,0 +1,10 @@
+- hosts: isucon_servers
+  become: true
+  tasks:
+    - name: nginxの設定ファイルを配置
+      copy:
+        src: files/nginx.conf
+        dest: /etc/nginx/nginx.conf
+        owner: isucon
+        group: isucon
+        mode: "0644"
