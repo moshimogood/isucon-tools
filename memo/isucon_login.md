@@ -1,3 +1,5 @@
+# isucon ユーザに sudo 権限つける&直接 ssh できるように設定
+
 sudo usermod -aG sudo isucon
 sudo mkdir -p /home/isucon/.ssh
 sudo chmod 700 /home/isucon/.ssh
