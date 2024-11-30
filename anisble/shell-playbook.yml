@@ -1,0 +1,17 @@
+- hosts: isucon_servers
+  become: true
+  tasks:
+    - name: nginxローテーションシェルを配置
+      copy:
+        src: files/nginx-log-lotate.sh
+        dest: /home/isucon/shell/nginx-log-lotate.sh
+        owner: isucon
+        group: isucon
+        mode: "644"
+    - name: query-logローテーションシェルを配置
+      copy:
+        src: files/query-log-lotate.sh
+        dest: /home/isucon/shell/query-log-lotate.sh
+        owner: isucon
+        group: isucon
+        mode: "644"
