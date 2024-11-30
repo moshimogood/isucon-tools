@@ -27,3 +27,8 @@ error_log /var/log/nginx/error.log;
 
 このように加工できる
 sudo cat access.log | alp json -m "/api/livestream/[0-9]+,/api/user/[a-z0-9]+"
+
+!!!!うまくいかない場合!!!!
+→おそらくnginxの変更した設定を読み込めていない
+sudo nginx -t
+sudo systemctl reload nginx
